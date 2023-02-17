@@ -4,7 +4,7 @@ import defaultImage from '../assets/astley.png'
 import "./Main.css"
 
 function Main() {
-  const [image, setImage] = useState(null);
+  const [setImage] = useState(null);
   const [palette, setPalette] = useState([]);
   const [imageUrl, setImageUrl] = useState(null);
   const fileInput = useRef(null);
@@ -39,12 +39,6 @@ function Main() {
     setImage(file);
   }
 
-  const handleOppositeColors = () => {
-    const newPalette = palette.map(color => {
-      return [255 - color[0], 255 - color[1], 255 - color[2]];
-    });
-    setPalette(newPalette);
-  }
 
   const handleSelectFile = () => {
     fileInput.current.click();
